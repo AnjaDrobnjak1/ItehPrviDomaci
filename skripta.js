@@ -1,5 +1,6 @@
 $(function () {
     dodajTenisera();
+    obrisiTenisera();
 });
 
 function dodajTenisera() {
@@ -22,4 +23,24 @@ function dodajTenisera() {
             }
         })
     })
+}
+
+
+function obrisiTenisera() {
+
+    $(document).on('click', '#dugme_obrisi', function () {
+
+        var id = $(this).attr('value');
+
+        $.ajax({
+            url: 'obrisiTenisera.php',
+            method: 'post',
+            data: { id: id },
+
+            success: function (data) {
+                $('#tabela-teniseri-tbody').html(data);
+            }
+        })
+    })
+
 }

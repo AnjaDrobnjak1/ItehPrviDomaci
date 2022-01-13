@@ -94,7 +94,7 @@
                         <td><?php echo $teniser['naziv']; ?></td>
                         <td>
                             <button type="button" class="btn btn-info">Izmena</button>
-                            <button type="button" class="btn btn-danger">Obriši</button>
+                            <button type="button" class="btn btn-danger" value="<?php echo $teniser['id']; ?>" id="dugme_obrisi">Obriši</button>
                         </td>
                     </tr>
                 <?php endwhile; ?>
