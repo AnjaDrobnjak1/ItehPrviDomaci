@@ -31,8 +31,8 @@ while ($teniser = mysqli_fetch_array($resultSet)) :
         <td><?php echo $teniser['osvojeni_turniri']; ?></td>
         <td><?php echo $teniser['naziv']; ?></td>
         <td>
-            <button type="button" class="btn btn-info">Izmena</button>
-            <button type="button" class="btn btn-danger">Obriši</button>
+            <a href="izmeniTenisera.php?id=<?php echo $teniser['id']; ?>"><button type="button" class="btn btn-info">Izmena</button></a>
+            <button type="button" class="btn btn-danger" value="<?php echo $teniser['id']; ?>" id="dugme_obrisi">Obriši</button>
         </td>
     </tr>
 <?php endwhile; ?>

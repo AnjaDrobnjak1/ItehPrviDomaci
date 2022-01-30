@@ -29,8 +29,6 @@
 
         <h2 class="mb-3">Izmena tenisera</h2>
 
-        <input type="hidden" class="form-control" name="id" value="<?php echo $teniser['id']; ?>">
-
         <div class="mb-3">
             <label class="form-label">Ime </label>
             <input type="text" class="form-control" name="ime" value="<?php echo $teniser['ime']; ?>">
@@ -73,19 +71,13 @@
 
     if (isset($_POST['izmeni_tenisera_dugme'])) {
         $teniser1 = new Teniser();
-        if ($teniser1->azurirajTenisera($_POST['id'], $_POST['ime'], $_POST['prezime'], $_POST['pozicija'], $_POST['osvojeni_turniri'], $_POST['drzava_id'])) {
+        if ($teniser1->azurirajTenisera($_GET['id'], $_POST['ime'], $_POST['prezime'], $_POST['pozicija'], $_POST['osvojeni_turniri'], $_POST['drzava_id'])) {
             header('Location: index.php');
         } else {
             echo 'Greska!';
         }
     }
-
     ?>
-
-
-
-
-
 
 
 </body>
