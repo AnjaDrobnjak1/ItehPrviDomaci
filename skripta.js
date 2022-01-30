@@ -1,5 +1,6 @@
 $(function () {
     dodajTenisera();
+    $('#tabela-teniseri').DataTable();
     obrisiTenisera();
 });
 
